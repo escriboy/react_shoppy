@@ -1,7 +1,6 @@
 import React from 'react';
 import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
-
 import useCart from '../hooks/useCart';
 
 const ICON_CLASS =
@@ -17,7 +16,7 @@ export default function CartItem({
     addOrUpdateItem.mutate({ ...product, quantity: quantity - 1 });
   };
   const handlePlus = () =>
-    addOrUpdateItem.mutate({ ...product, quantity: quantity - 1 });
+    addOrUpdateItem.mutate({ ...product, quantity: quantity + 1 });
   const handleDelete = () => removeItem.mutate(id);
 
   return (
